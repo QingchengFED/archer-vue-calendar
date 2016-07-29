@@ -1,2 +1,2 @@
 # archer-vue-calendar
-a vue mobile calendar
+a vue calendar component for qingcheng mobile projects.

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calendar demo</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+<button @click="showCalendar()">show calendar</button>
+<calendar :show.sync="show" :current-date.sync="currentDate"></calendar>
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script src="../node_modules/moment/moment.js"></script>
+<script src="/dist/index.js"></script>
+<script src="/demo/dist/index.js"></script>
+</body>
+</html>
