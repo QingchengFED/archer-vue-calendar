@@ -36,7 +36,7 @@
 </style>
 
 <script>
-    import Moment from 'moment';
+    import moment from 'moment';
 
     export default{
         data(){
@@ -47,7 +47,7 @@
         },
         created () {
             this.weeks = this.manageDate(this.currentDate);
-            this.currentDateTxt = Moment(this.currentDate).format('YYYY年MM月');
+            this.currentDateTxt = moment(this.currentDate).format('YYYY年MM月');
         },
         props: {
             currentDate: {
@@ -76,12 +76,12 @@
                 $event.stopPropagation();
             },
             changeMonth ($event, offset){
-                var _date = Moment(this.currentDate);
+                var _date = moment(this.currentDate);
                 _date.month(_date.month() + offset);
                 this.currentDate = _date.format('YYYY-MM-DD')
             },
             selectDay ($event, day) {
-                this.currentDate = Moment(day.date).format('YYYY-MM-DD');
+                this.currentDate = moment(day.date).format('YYYY-MM-DD');
                 this.show = !1;
             },
             manageDate (date) {
@@ -127,7 +127,7 @@
                             disabled = !(d.getMonth() == calendarDate.getMonth());
 
                             data.date = d;
-                            data.dateTxt = Moment(d).format('D');
+                            data.dateTxt = moment(d).format('D');
                             data.disabled = disabled;
                             data.data = [];
                             if (datesAreEqual(d, today)) {
@@ -158,7 +158,7 @@
         watch: {
             currentDate (val) {
                 this.weeks = this.manageDate(this.currentDate);
-                this.currentDateTxt = Moment(this.currentDate).format('YYYY年MM月')
+                this.currentDateTxt = moment(this.currentDate).format('YYYY年MM月')
             }
         }
     }
