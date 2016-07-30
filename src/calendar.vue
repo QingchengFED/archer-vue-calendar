@@ -13,13 +13,7 @@
             <table class="calendarTable">
                 <thead class="headerWrap">
                 <tr>
-                    <th class="z-weekend">日</th>
-                    <th>一</th>
-                    <th>二</th>
-                    <th>三</th>
-                    <th>四</th>
-                    <th>五</th>
-                    <th class="z-weekend">六</th>
+                    <th :class="{'z-weekend': $index ==0 || $index == 6}" v-for="text in weekText">{{text}}</th>
                 </tr>
                 </thead>
                 <tbody class="calendarWrap">
@@ -27,7 +21,7 @@
                     <td :class="{'z-disabled': day.disabled, 'z-active': day.selected}" v-for="day in week"
                         v-on:click="selectDay($event, day)">
                         <span v-if="!day.isToday">{{day.dateTxt}}</span>
-                        <span v-if="day.isToday">今天</span>
+                        <span v-if="day.isToday">{{currentDayTxt}}</span>
                     </td>
                 </tr>
                 </tbody>
@@ -43,7 +37,6 @@
 
 <script>
     import Moment from 'moment';
-    import Vue from 'vue';
 
     export default{
         data(){
@@ -59,11 +52,20 @@
         props: {
             currentDate: {
                 required: true,
-                twoWay: true
+                twoWay: true,
+                default: () => new Date()
             },
             show: {
                 required: true,
                 twoWay: true
+            },
+            weekTet: {
+                type: Array,
+                default: () => ['日','一','二','三','四','五','六']
+            },
+            currentDayTxt: {
+                type: String,
+                default: () => '今天'
             }
         },
         methods: {
