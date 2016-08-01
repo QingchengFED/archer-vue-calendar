@@ -13,7 +13,7 @@
             <table class="calendarTable">
                 <thead class="headerWrap">
                 <tr>
-                    <th :class="{'z-weekend': $index ==0 || $index == 6}" v-for="text in weekText">{{text}}</th>
+                    <th :class="{'z-weekend': $index ==0 || $index == 6}" v-for="text in weekTxt">{{text}}</th>
                 </tr>
                 </thead>
                 <tbody class="calendarWrap">
@@ -59,7 +59,7 @@
                 required: true,
                 twoWay: true
             },
-            weekTet: {
+            weekTxt: {
                 type: Array,
                 default: () => ['日','一','二','三','四','五','六']
             },
