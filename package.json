@@ -1,11 +1,12 @@
 {
   "name": "archer-vue-calendar",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a vue calendar component for qingcheng mobile projects.",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "webpack-dev-server --progress --hide-modules --config build/webpack.dev.config.js",
-    "build": "webpack --progress --hide-modules --config build/webpack.prod.config.js"
+    "demo": "webpack-dev-server --progress --hide-modules --config build/webpack.dev.config.js",
+    "build": "webpack --progress --hide-modules --config build/webpack.prod.config.js",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "moment": "^2.14.1",

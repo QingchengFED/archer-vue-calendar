@@ -26,7 +26,7 @@ module.exports = {
         postcss: [require('postcss-pxtorem')({
             rootValue: 12,
             unitPrecision: 5,
-            propWhiteList: ['font', 'font-size', 'line-height', 'letter-spacing', 'min-height', 'height', 'width', 'padding', 'margin', 'left', 'right', 'top', 'bottom'],
+            propWhiteList: ['font', 'font-size', 'line-height', 'letter-spacing', 'min-height', 'height', 'width', 'padding', 'margin', 'left', 'right', 'top', 'bottom', 'margin-left', 'margin-top', 'margin-right', 'margin-top', 'padding-left', 'padding-top', 'padding-right', 'padding-bottom'],
             selectorBlackList: [/^html$/],
             replace: true,
             mediaQuery: false,

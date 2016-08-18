@@ -18,8 +18,8 @@
                 </thead>
                 <tbody class="calendarWrap">
                 <tr v-for="week in weeks">
-                    <td :class="{'z-disabled': day.disabled, 'z-active': day.selected}" v-for="day in week"
-                        v-on:click="selectDay($event, day)">
+                    <td :class="{'z-disabled': day.disabled, 'z-active': day.selected, 'z-today': day.isToday}" v-for="day in week"
+                        @click="selectDay($event, day)">
                         <span v-if="!day.isToday">{{day.dateTxt}}</span>
                         <span v-if="day.isToday">{{currentDayTxt}}</span>
                     </td>
