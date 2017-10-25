@@ -1,6 +1,6 @@
 {
   "name": "archer-vue-calendar",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "a vue calendar component for qingcheng mobile projects.",
   "main": "dist/index.js",
   "scripts": {

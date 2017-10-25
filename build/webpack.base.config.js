@@ -11,6 +11,7 @@ module.exports = {
         libraryTarget: 'umd',
         umdNamedDefine: true
     },
+    watch: true,
     module: {
         loaders: [
             {test: /\.vue$/, loader: 'vue'},

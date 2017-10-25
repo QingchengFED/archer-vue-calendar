@@ -2,7 +2,7 @@
 a vue calendar component for qingcheng mobile projects.
 
 
-#	Usage
+# Usage
 
 ```JavaScript
 <calendar :show.sync="show" :current-date.sync="currentDate"></calendar>
@@ -17,3 +17,6 @@ a vue calendar component for qingcheng mobile projects.
 ```JavaScript
 <calendar :show.sync="show" :current-date.sync="currentDate" :week-txt="['sun','mon','tue','wed','thu','fri','sat']"></calendar>
 ```
+
+## Change log
+* v2.0.0 support vue 2.3+ for .sync  
